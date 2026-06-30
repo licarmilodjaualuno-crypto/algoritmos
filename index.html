@@ -3,63 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Primeira Página</title>
-    
-    <style>
-        /* Estilos básicos para deixar a página mais bonita */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-        }
-
-        .container {
-            background-color: #ffffff;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            max-width: 600px;
-        }
-
-        h1 {
-            color: #2c3e50;
-        }
-
-        p {
-            line-height: 1.6;
-        }
-
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #3498db;
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: #2980b9;
-        }
-    </style>
+    <title>Portfólio Académico | Licarmilo da Costa Djau</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="container">
-        <h1>Bem-vindo ao Meu Site!</h1>
-        <p>Esta é uma página <strong>index.html</strong> básica. Você pode usar este modelo como ponto de partida para construir o seu próprio projeto web. Edite o código para adicionar o seu conteúdo.</p>
-        <a href="#" class="btn">Clique Aqui</a>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Portfólio<span>.</span></a>
+            <nav class="nav-links">
+                <a href="#home">Início</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#projetos">Trabalhos</a>
+                <a href="#contato">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-avatar">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Licarmilo da Costa Djau">
+            </div>
+            <div class="hero-content">
+                <p class="hero-greeting">Portfólio Universitário</p>
+                <h1 class="hero-name">Licarmilo da Costa Djau</h1>
+                <h2 class="hero-title">Estudante de Tecnologia & Cripto</h2>
+                <p class="hero-bio">Espaço dedicado à apresentação e organização dos trabalhos práticos, algoritmos e relatórios desenvolvidos durante a disciplina académica.</p>
+                <div class="hero-socials">
+                    <a href="https://github.com/licarmilodjaualuno-crypto" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="about-section">
+        <div class="section-container">
+            <h2 class="section-title">Sobre o Portfólio</h2>
+            <div class="about-content">
+                <p>Este portfólio foi desenvolvido com o objetivo de reunir, documentar e demonstrar de forma clara e estruturada todas as atividades práticas propostas em ambiente de sala de aula. Os trabalhos abrangem desde a recolha e estruturação de dados regionais até a automação via scripts e relatórios analíticos, utilizando ferramentas modernas de versionamento de código.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projetos" class="projects-section">
+        <div class="section-container">
+            <h2 class="section-title">Trabalhos Desenvolvidos</h2>
+            <p class="section-subtitle">Pressione o botão "Ver Detalhes" para ler os objetivos, dificuldades e as melhorias sugeridas para cada entrega.</p>
+            <div id="projects-grid" class="projects-grid"></div>
+        </div>
+    </section>
+
+    <section id="contato" class="contact-section">
+        <div class="section-container">
+            <h2 class="section-title">Identificação e Autoria</h2>
+            <p>Validação formal de autoria das atividades desenvolvidas para a entrega final do projeto.</p>
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <i class="fas fa-user"></i>
+                    <span>Licarmilo da Costa Djau</span>
+                </div>
+                <div class="contact-card">
+                    <i class="fab fa-github"></i>
+                    <span>licarmilodjaualuno-crypto</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 Licarmilo da Costa Djau. Hospedado via GitHub Pages.</p>
+    </footer>
+
+    <div id="project-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close-btn" id="close-modal-btn">&times;</button>
+            <h3 id="modal-project-title" class="modal-title">Título</h3>
+            <div class="modal-body">
+                <h4><i class="fas fa-bullseye"></i> Descrição / Objetivo</h4>
+                <p id="modal-project-objective">...</p>
+                <h4><i class="fas fa-exclamation-triangle"></i> Dificuldades Encontradas</h4>
+                <p id="modal-project-difficulties">...</p>
+                <h4><i class="fas fa-chart-line"></i> Resultados e Possíveis Melhorias</h4>
+                <p id="modal-project-results">...</p>
+            </div>
+        </div>
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
